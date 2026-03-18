@@ -67,9 +67,6 @@ pip install -r requirements.txt
 # 4. Run the server
 uvicorn src.api.main:app --reload --port 8000
 ```
-
-Visit **http://localhost:8000/docs** for the interactive Swagger UI.
-
 ---
 
 ## 🔌 API Reference
