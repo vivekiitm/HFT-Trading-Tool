@@ -121,6 +121,23 @@ make
 
 ```
 python backtest/runner.py
+
+## 🔌 API Reference
+
+### Orders
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/v1/orders/` | Submit a new order |
+| `GET` | `/api/v1/orders/` | List orders (filter by symbol/status) |
+| `GET` | `/api/v1/orders/{id}` | Get order by ID |
+| `DELETE` | `/api/v1/orders/{id}` | Cancel an open order |
+
+**Submit order example:**
+```bash
+curl -X POST http://localhost:8000/api/v1/orders/ \
+  -H "Content-Type: application/json" \
+  -d '{"symbol": "AAPL", "side": "BUY", "quantity": 100, "price": 182.50}'
 ```
 
 ---
